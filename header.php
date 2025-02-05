@@ -70,7 +70,7 @@
                     <ul id="header" class="navbar-nav me-auto align-items-sm-center pt-1">
                         <li class="btn-menu ms-lg-4 mt-3 mt-lg-0"><a href="<?php echo home_url('/notre-methode/'); ?>">Notre méthode</a></li>
                         <li class="btn-menu ms-lg-4 mt-3 mt-lg-0"><a href="<?php echo home_url('/lagence/'); ?>">L’agence</a></li>
-                        <li class="btn-menu ms-lg-4 mt-3 mt-lg-0"><a href="<?php echo home_url('/etudes-de-cas/'); ?>">Études de cas</a></li>
+                        <li class="btn-menu ms-lg-4 mt-3 mt-lg-0"><a href="<?php echo home_url('/etudes-de-cas/'); ?>">Nos témoignages clients</a></li>
                         <li class="btn-menu ms-lg-4 mt-3 mt-lg-0"><a href="<?php echo home_url('/blog/'); ?>">Blog</a></li>
                         <li class="btn-menu ms-lg-4 mt-3 mt-lg-0"><a href="<?php echo home_url('/contact/'); ?>">Contact</a></li>
                     </ul>

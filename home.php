@@ -62,8 +62,7 @@ $page_id = get_queried_object_id();
         </div>
     </section>
 
-
-        <section class="page__etude--content position-relative" id="decouvrir">
+    <section class="page__etude--content position-relative" id="decouvrir">
         <div class="container__lg">
             <div class="py-3 py-md-8">
                 <div class="row">
@@ -103,10 +102,6 @@ $page_id = get_queried_object_id();
             </div>    
         </div>
     </section>
-
-
-        
-
 
     <section class="cta-section">
         <div class="container__lg">

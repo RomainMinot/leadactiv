@@ -163,7 +163,7 @@ $displayMore = false;
         <div class="container__lg">
             <div class="py-3 py-md-8">
                 <h2 class="cta-title">
-                    <span class="light-text">Nous prospectons,</span>
+                    <span class="light-text">Nous prospectons, sss</span>
                     <br>
                     <strong>vous vendez</strong>
                 </h2>
