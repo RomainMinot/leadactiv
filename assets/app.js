@@ -40,10 +40,6 @@ require('font-awesome-webpack-4');
 require("./app.scss");
 /*----------------------------*/
 
-$(document).ready(function($){
-    console.log("%cCreated by Genesii and Gardeners, with ❤", "color: #9ed6a8; padding: 5px 0px 1px; border-bottom:2px solid #9ed6a8;");
-});
-
 /*----------------------------*/
 //Extra JS -> write here
 require('./js/script');
