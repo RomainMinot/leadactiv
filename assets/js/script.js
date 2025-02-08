@@ -483,15 +483,17 @@ document.addEventListener('DOMContentLoaded', function () {
     // window.addEventListener('wheel', handleScroll, { passive: false });
 
     // Intersection Observer to detect when section is in view
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-        sectionInView = entry.isIntersecting;
+    if (section) {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+            sectionInView = entry.isIntersecting;
+            });
+        }, {
+            threshold: 0.1 // Adjust this threshold as needed
         });
-    }, {
-        threshold: 0.1 // Adjust this threshold as needed
-    });
 
-    observer.observe(section);
+        observer.observe(section);
+    }
 });
 
 /* BLOG */
@@ -621,40 +623,42 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateProgressBar() {
-        const scrollHeight = textContainer.scrollHeight - textContainer.clientHeight;
-        const scrollTop = textContainer.scrollTop;
-        const progress = (scrollTop / scrollHeight) * 100;
-        progressBar.style.height = `${progress}%`;
+        if (textContainer) {
+            const scrollHeight = textContainer.scrollHeight - textContainer.clientHeight;
+            const scrollTop = textContainer.scrollTop;
+            const progress = (scrollTop / scrollHeight) * 100;
+            progressBar.style.height = `${progress}%`;
 
-        sections.forEach((section, index) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
-            const sectionType = section.dataset.sectionType;
-            let color;
-            switch (sectionType) {
-            case 'carte_fondation':
-                color = '#E0F9D3'; // Green
-                break;
-            case 'carte_exec':
-                color = '#C6CBF7'; // Purple
-                break;
-            case 'carte_reflexion':
-                color = '#F9ECE0'; // Salmon
-                break;
-            default:
-                color = '#000'; // Default
+            sections.forEach((section, index) => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
+                const sectionType = section.dataset.sectionType;
+                let color;
+                switch (sectionType) {
+                case 'carte_fondation':
+                    color = '#E0F9D3'; // Green
+                    break;
+                case 'carte_exec':
+                    color = '#C6CBF7'; // Purple
+                    break;
+                case 'carte_reflexion':
+                    color = '#F9ECE0'; // Salmon
+                    break;
+                default:
+                    color = '#000'; // Default
+                }
+                progressBar.style.backgroundColor = color;
+
+                if (index !== currentImageIndex) {
+                currentImageIndex = index;
+                showImage(currentImageIndex);
+                }
+
+                // Update active state of etiquettes
+                updateActiveEtiquette(sectionType);
             }
-            progressBar.style.backgroundColor = color;
-
-            if (index !== currentImageIndex) {
-            currentImageIndex = index;
-            showImage(currentImageIndex);
-            }
-
-            // Update active state of etiquettes
-            updateActiveEtiquette(sectionType);
-        }
         });
+        }
     }
 
     function handleSectionScroll(event) {

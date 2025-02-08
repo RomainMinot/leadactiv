@@ -109,7 +109,7 @@ $page_id = get_queried_object_id();
                 <h2 class="cta-title">
                     <span class="light-text">Nous prospectons,</span>
                     <br>
-                    <strong>vous vendez</strong>
+                    <strong>vous vendez eheheh</strong>
                 </h2>
                 <div class="cta-buttons">
                     <a href="<?php echo home_url('/prendre-rendez-vous/'); ?>" class="btn color-btn-dark">Prendre
