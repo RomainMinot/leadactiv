@@ -67,7 +67,7 @@ function genesii_loadmore_ajax_handler(){
     query_posts( $args );
 
     if( have_posts() ) :
-
+ 
         // run the loop
         while( have_posts() ): the_post();
             get_template_part( 'template-parts/post/content-archive' );

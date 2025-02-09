@@ -70,7 +70,7 @@
                         <li class="btn-menu ms-lg-4 mt-3 mt-lg-0"><a href="<?php echo home_url('/lagence/'); ?>">L’agence</a></li>
                         <li class="btn-menu ms-lg-4 mt-3 mt-lg-0"><a href="<?php echo home_url('/etudes-de-cas/'); ?>">Nos témoignages clients</a></li>
                         <li class="btn-menu ms-lg-4 mt-3 mt-lg-0"><a href="<?php echo home_url('/blog/'); ?>">Blog</a></li>
-                        <li class="btn-menu ms-lg-4 mt-3 mt-lg-0"><a href="<?php echo home_url('/contact/'); ?>">Contact</a></li>
+                        <li class="btn-menu ms-lg-4 mt-3 mt-lg-0"><a href="<?php echo home_url('/contact/'); ?>">Contacts</a></li>
                     </ul>
                     <ul class="navbar-nav ms-auto align-items-sm-center">
                         <li class="btn <?php echo $button_class; ?> ms-lg-3 mt-3 mt-lg-0"><a href="<?php echo home_url('/prendre-rendez-vous/'); ?>">Prendre rendez-vous</a></li>

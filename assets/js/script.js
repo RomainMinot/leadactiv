@@ -303,14 +303,14 @@ document.addEventListener("DOMContentLoaded", function () {
         var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
         if (currentScroll > lastScrollTop) {
-        // Downscroll
-        navbar.style.top = "-100px"; // Adjust as necessary to hide the navbar
-        isNavbarHidden = true;
-        clearTimeout(hideNavbarTimeout); // Clear any existing timeout
+            // Downscroll
+            navbar.style.top = "-100px"; // Adjust as necessary to hide the navbar
+            isNavbarHidden = true;
+            clearTimeout(hideNavbarTimeout); // Clear any existing timeout
         } else {
-        // Upscroll
-        navbar.style.top = "0";
-        isNavbarHidden = false;
+            // Upscroll
+            navbar.style.top = "0";
+            isNavbarHidden = false;
         }
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
     });
@@ -548,23 +548,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* Caroussel indicator */
 document.addEventListener("DOMContentLoaded", function () {
-var carousel = document.querySelector('#carouselEtudesDeCas');
-var indicators = document.querySelectorAll('.carousel-indicators li');
+    var carousel = document.querySelector('#carouselEtudesDeCas');
+    var indicators = document.querySelectorAll('.carousel-indicators li');
 
-if (carousel) {
-    carousel.addEventListener('slid.bs.carousel', function (event) {
-        indicators.forEach(function (indicator) {
-        indicator.classList.remove('active');
-        });
-        indicators[event.to].classList.add('active');
+    if (carousel) {
+        carousel.addEventListener('slid.bs.carousel', function (event) {
+            indicators.forEach(function (indicator) {
+            indicator.classList.remove('active');
+            });
+            indicators[event.to].classList.add('active');
 
-        indicators.forEach(function (indicator) {
-        indicator.style.animation = 'none';
-        indicator.offsetHeight; /* trigger reflow */
-        indicator.style.animation = null;
+            indicators.forEach(function (indicator) {
+            indicator.style.animation = 'none';
+            indicator.offsetHeight; /* trigger reflow */
+            indicator.style.animation = null;
+            });
         });
-    });
-}
+    }
 });
 
 /* calendly */ 

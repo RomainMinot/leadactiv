@@ -30,7 +30,7 @@ if (isset($args) && array_key_exists('id', $args)) {
                     <?php endforeach; ?>
                 <?php endif; ?>
             </div>
-            <h3 class="card--title pt-3 mt-4"><?php echo get_the_title($id); ?></h3>
+            <h3 class="card--title pt-3 mt-4"><?php echo get_the_title($id); ?>ss</h3>
             
             <div class="d-flex align-items-center mt-auto">
                 <div class="author-avatar me-2">
