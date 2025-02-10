@@ -35,6 +35,7 @@ if (array_key_exists("selectionner_toutes_etudes", $lame_etude_cas)) {
                     <?php if ($lame_etude_cas["etiquette"]): ?>
                         <h3 class="sub-head mt-4 mb-3 px-2 justify-content-center text-center">
                             <?php echo $lame_etude_cas["etiquette"] ?>
+                            sqsq
                         </h3>
                     <?php endif; ?>
 

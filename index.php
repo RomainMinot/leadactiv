@@ -16,7 +16,6 @@
                             <div class="col-12 col-md-11 py-3 py-md-0">
                                 <h1 class="mb-4 content-mb-0 position-relative "><?php echo get_the_title() ?></h1>
                             </div>
-                            
                         </div>
                     </div>
                 </div>

@@ -40,7 +40,7 @@
 
     // Define arrays for pages to check background and button styling
     $navbar_home_pages = ['agence-de-prospection-linkedin', 'agence-de-prospection-email', 'agence-prospection-externalisee', 'agence-generation-leads', 'prospection-generation-leads-editeur-logiciel', 'generation-leads-cabinet-agence-conseil', 'generation-leads-cabinets-recrutement', 'prospection-cabinet-comptable', 'prospection-agence-esn', 'prospection-commerciale-hotels', 'prospection-commerciale-industrie'];
-    $navbar_special_pages = ['notre-methode', 'lagence', 'contact'];
+    $navbar_special_pages = ['notre-methode', 'lagence', 'contact', 'temoignages'];
     $navbar_blog_pages = ['etudes-de-cas', 'blog', 'page__blog'];
 
     // Set navbar and button classes based on page
@@ -68,7 +68,7 @@
                     <ul id="header" class="navbar-nav me-auto align-items-sm-center pt-1">
                         <li class="btn-menu ms-lg-4 mt-3 mt-lg-0"><a href="<?php echo home_url('/notre-methode/'); ?>">Notre méthode</a></li>
                         <li class="btn-menu ms-lg-4 mt-3 mt-lg-0"><a href="<?php echo home_url('/lagence/'); ?>">L’agence</a></li>
-                        <li class="btn-menu ms-lg-4 mt-3 mt-lg-0"><a href="<?php echo home_url('/etudes-de-cas/'); ?>">Nos témoignages clients</a></li>
+                        <li class="btn-menu ms-lg-4 mt-3 mt-lg-0"><a href="<?php echo home_url('/temoignages/'); ?>">Nos témoignages clients</a></li>
                         <li class="btn-menu ms-lg-4 mt-3 mt-lg-0"><a href="<?php echo home_url('/blog/'); ?>">Blog</a></li>
                         <li class="btn-menu ms-lg-4 mt-3 mt-lg-0"><a href="<?php echo home_url('/contact/'); ?>">Contacts</a></li>
                     </ul>
