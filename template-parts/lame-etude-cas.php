@@ -27,54 +27,49 @@ if (array_key_exists("selectionner_toutes_etudes", $lame_etude_cas)) {
 
 ?>
 
-
-    <div class=" lame--etude-cas container__lg">
-        <div class="py-3 py-md-8">
-            <div class="row align-items-center justify-content-center text-center">
-                <div class="col-12">
-                    <?php if ($lame_etude_cas["etiquette"]): ?>
-                        <h3 class="sub-head mt-4 mb-3 px-2 justify-content-center text-center">
-                            <?php echo $lame_etude_cas["etiquette"] ?>
-                            sqsq
-                        </h3>
-                    <?php endif; ?>
-
-                    <?php if ($lame_etude_cas["titre"]): ?>
-                       <div class="container__sm"> <h2 class="small-title f-36 mb-4 mb-md-6 mt-0">
-                            <?php echo $lame_etude_cas["titre"] ?>
-                        </h2></div>
-                    <?php endif; ?>
-                </div>
-            </div>
-
-            <div class="row g-4">
+<section class="lame--etude-cas bg-white container__lg">
+    <div class="py-3 py-md-8">
+        <div class="relative row justify-content-center">
+            <div class="col-md-8 col-10 col-lg-8 text-center">
                 <?php
-                if (count($all_etudes) > 0)
-                    $etudes = $all_etudes;
-                else
-                    $etudes = $lame_etude_cas["etudes_cas"];
+                if ($lame_etude_cas["titre"]):
+                    echo '<h2 class="f-48 mt-0 mb-4">' . $lame_etude_cas["titre"] . '</h2>';
+                endif;
 
-                $count = 0;
+                if ($lame_etude_cas["etiquette"]):
+                    echo '<p class="content-text f-18">' . $lame_etude_cas["etiquette"] . '</p>';
+                endif;
                 ?>
-
-                <?php foreach (is_array($etudes) ? $etudes : [] as $etude): ?>
-                    <?php if ($count >= 4) break; ?>
-                    <?php $etude_fields = get_fields($etude->ID); ?>
-                        <?php include(get_template_directory() . '/template-parts/card-etude-cas-component.php'); ?>
-                    <?php $count++; ?>
-                <?php endforeach; ?>
             </div>
+        </div>
+        <div class="row g-4 mt-5">
+            <?php
+            if (count($all_etudes) > 0)
+                $etudes = $all_etudes;
+            else
+                $etudes = $lame_etude_cas["etudes_cas"];
 
-            <div class="row justify-content-center mt-5 mb-4">
-                <div class="col-auto text-center">
-                    <?php if ($lame_etude_cas["lien_etudes_cas"]): ?>
-                        <a class="btn color-btn-dark"
+            $count = 0;
+            ?>
+
+            <?php foreach (is_array($etudes) ? $etudes : [] as $etude): ?>
+                <?php if ($count >= 3) break; ?>
+                <?php $etude_fields = get_fields($etude->ID); ?>
+                    <?php include(get_template_directory() . '/template-parts/card-etude-cas-component.php'); ?>
+                <?php $count++; ?>
+            <?php endforeach; ?>
+        </div>
+        <div class="row justify-content-center mt-5 mb-4">
+            <div class="col-auto text-center">
+                <?php if ($lame_etude_cas["lien_etudes_cas"]): ?>
+                    <a 
+                        class="btn color-btn-dark"
                         target="<?php echo $lame_etude_cas["lien_etudes_cas"]["target"] ?>"
                         href="<?php echo home_url('/etudes-de-cas/'); ?>">
-                            <?php echo $lame_etude_cas["lien_etudes_cas"]["title"] ?>
-                        </a>
-                    <?php endif; ?>
-                </div>
+                        <?php echo $lame_etude_cas["lien_etudes_cas"]["title"] ?>
+                    </a>
+                <?php endif; ?>
             </div>
         </div>
     </div>
+</section>

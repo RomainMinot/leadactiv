@@ -793,9 +793,6 @@ body .carte--colo--ciel .carte--colo--title {
 body .carte--colo .carte--colo--title {
   border-bottom:solid 1px
 }
-body .carte--colo:hover {
-  transform:scale(1.05)
-}
 
 body .carte--border {
   background-color:#fff;
@@ -8309,6 +8306,10 @@ fieldset:disabled .btn {
   max-width:100% !important
 }
 
+.mw-max {
+  max-width: max-content;
+}
+
 .vw-100 {
   width:100vw !important
 }
@@ -15635,6 +15636,7 @@ body a.filter-link.active:after {
   font-size: 22px;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  line-height: 30px!important;
   color: #000000;
 }
 
@@ -15665,8 +15667,9 @@ body a.filter-link.active:after {
   }
 
   .lame--etude-cas .card-logo {
-    width: 6rem;
-	height: 3rem;
+    width: 125px;
+    height: 40px;
+    object-fit: contain;
   }
   .lame--etude-cas .tag-container {
     justify-content: center !important;

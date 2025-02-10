@@ -1031,10 +1031,6 @@ body {
       &:hover {
         cursor: pointer;
 
-        img {
-          transform: scale(1.05);
-        }
-
         .card--link {
           color: $primary;
         }
