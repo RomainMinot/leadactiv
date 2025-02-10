@@ -4767,7 +4767,7 @@ fieldset:disabled .btn {
   align-items: center;
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
-  transition: .35s ease-out;
+  transition: .35s ease;
 }
 
 .navbar .container-fluid {
@@ -5191,6 +5191,7 @@ fieldset:disabled .btn {
 /* Notre méthode, L’agence, Contact */
 .navbar-method-agency-contact {
   background-color: #C6CBF7 !important;
+  border-bottom: 1px solid #0000001A;
 }
 .navbar-method-agency-contact .navbar-nav .nav-link, .navbar-method-agency-contact .navbar-brand, .navbar-method-agency-contact .btn-menu a {
   color: #110612 !important;
@@ -10879,6 +10880,9 @@ fieldset:disabled .btn {
   .pb-md-5 {
     padding-bottom:3rem !important
   }
+  .pb-md-8 {
+    padding-bottom: 6rem !important
+  }
   .ps-md-0 {
     padding-left:0 !important
   }
@@ -15045,6 +15049,37 @@ body a.filter-link.active:after {
           background-color: $peach;
           bottom: 10%;
           right: 15%;
+        }
+      }
+    }
+    &__discover {
+      &__card {
+        padding: 80px 64px;
+        border-radius: 32px;
+        background-color: $lavender;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        & h2 {
+          width: 65%;
+        }
+        &__links {
+          width: 85%;
+        }
+        & .color-btn-dark {
+          padding: 6px 20px !important;
+          line-height: 24px !important;
+          font-weight: 400 !important;
+        }
+        &__logo {
+          position: absolute;
+          z-index: 0;
+          right: 0;
+          bottom: -1rem;
+          max-height: 95%;
+          opacity: .50;
         }
       }
     }
