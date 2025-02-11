@@ -33,7 +33,6 @@ $displayMore = false;
     <div class="article-content-container">
         <!-- Progress Bar -->
     <div id="progress-bar-container">
-        dfsf
         <div id="progress-bar"></div>
     </div>
         <div class="article-content-mask" id="content-mask"></div>
