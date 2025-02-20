@@ -155,7 +155,7 @@ $(document).ready(function($){
                     'items' : 3,
                 }
             },
-            'dots' : false,
+            'dots' : true,
             'margin': 15,
             'loop': true,
             'slideTransition': 'linear',
@@ -210,11 +210,31 @@ $(document).ready(function($){
                 'slideTransition': 'linear',
                 'autoplayTimeout': 1500,
                 'autoplaySpeed': 1550,
-                'margin': 30,
                 'loop': true,
 
             });
         });
+
+        $("#carouselTestimonials").owlCarousel({
+            'items': 12,
+            responsive : {
+                0 : {
+                    'items' : 3,
+                },
+                756 : {
+                    'items' : 3,
+                },
+                1200 : {
+                    'items' : 3,
+                }
+            },
+            'dots': true,
+            'autoplay': false,
+            'slideTransition': 'linear',
+            'margin': 32,
+            'nav': true,
+            'navText': ['&#x2190;', '&#x2192;']
+        })
 
         $(".owl-carousel.owl-carousel-clients-contact").each(function() {
             $(this).owlCarousel({

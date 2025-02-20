@@ -8,7 +8,7 @@
 <main class="page__temoignages">
     <section class="page__temoignages__header position-relative d-flex bg-deep-purple align-items-center">
         <div class="container__lg">
-            <div class="py-3 py-md-10">      
+            <div class="py-3 py-md-10 mt-5">      
                 <div class="relative row justify-content-center h-100">
                     <div class="col-md-8 col-10 col-lg-8">
                         <div class="d-flex flex-column align-items-center justify-content-center">
@@ -63,12 +63,49 @@
                         <p class="content-text f-18">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
-                <div class="mt-6 d-flex flex-column align-items-center gap-5">
-                    <div class="w-100 bg-light-gray p-5">
-                        <?php include(get_template_directory() . '/template-parts/card-etude-cas-component.php'); ?>
+                <div class="col-12 mt-6">
+                    <div id="carouselTestimonials" class="owl-carousel" data-bs-ride="carousel">
+                        <?php 
+                        $case_studies = get_field('etudes_cas'); 
+                        $has_slider = true;
+                        if ($case_studies && !empty($case_studies)):
+                            foreach ($case_studies as $index => $case_study):
+                                $case_study_fields = get_fields($case_study->ID);
+                        ?>
+                            <div class="carousel-item-active">
+                                <div class="row">
+                                    <?php include(get_template_directory() . '/template-parts/card-etude-cas-component.php'); ?>
+                                </div>
+                            </div>
+                        <?php
+                            endforeach; 
+                        endif;
+                        ?>
                     </div>
-                    <a href="<?php echo $temoignages_list_link; ?>" class="mx-auto btn color-btn-dark">Découvrir tous les témoignages</a>
+                    
+                    <div class="row justify-content-center mt-5">
+                        <div class="col-auto text-center">
+                            <a href="<?php echo $temoignages_list_link; ?>" class="btn color-btn-dark">Découvrir tous les témoignages</a>
+                        </div>
+                    </div>
                 </div>
+
+                <!--div class="row g-4 mt-5">
+                    <?php 
+                    /*$case_studies = get_field('etudes_cas'); 
+                    if ($case_studies && !empty($case_studies)):
+                        foreach ($case_studies as $case_study):
+                            $case_study_fields = get_fields($case_study->ID);
+                            include(get_template_directory() . '/template-parts/card-etude-cas-component.php');
+                        endforeach; 
+                    endif; */
+                    ?>
+                    <div class="row justify-content-center mt-5">
+                        <div class="col-auto text-center">
+                            <a href="<?php /* echo $temoignages_list_link; */ ?>" class="btn color-btn-dark">Découvrir tous les témoignages</a>
+                        </div>
+                    </div>
+                </div-->
             </div>
         </div>
     </section>

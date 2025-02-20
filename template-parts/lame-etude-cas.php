@@ -5,6 +5,7 @@ if (isset($args) && array_key_exists('bloc', $args)) {
 }
 
 $all_etudes = array();
+$has_slider = false;
 
 if (array_key_exists("selectionner_toutes_etudes", $lame_etude_cas)) {
 
@@ -45,16 +46,16 @@ if (array_key_exists("selectionner_toutes_etudes", $lame_etude_cas)) {
         <div class="row g-4 mt-5">
             <?php
             if (count($all_etudes) > 0)
-                $etudes = $all_etudes;
+                $case_studies = $all_etudes;
             else
-                $etudes = $lame_etude_cas["etudes_cas"];
+                $case_studies = $lame_etude_cas["etudes_cas"];
 
             $count = 0;
             ?>
 
-            <?php foreach (is_array($etudes) ? $etudes : [] as $etude): ?>
+            <?php foreach (is_array($case_studies) ? $case_studies : [] as $case_study): ?>
                 <?php if ($count >= 3) break; ?>
-                <?php $etude_fields = get_fields($etude->ID); ?>
+                <?php $case_study_fields = get_fields($case_study->ID); ?>
                     <?php include(get_template_directory() . '/template-parts/card-etude-cas-component.php'); ?>
                 <?php $count++; ?>
             <?php endforeach; ?>

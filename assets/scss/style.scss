@@ -15031,11 +15031,11 @@ body a.filter-link.active:after {
         &--lime {
           background-color: $lime;
           left: 10%;
-          top: 14%
+          top: 18%
         }
         &--black {
           background-color: $black;
-          top: 27%;
+          top: 30%;
           right: 6%;
           img {
             filter: invert(1);
@@ -15043,12 +15043,12 @@ body a.filter-link.active:after {
         }
         &--grey {
           background-color: $grey;
-          bottom: 7%;
+          bottom: 8%;
           left: 17%;
         }
         &--peach {
           background-color: $peach;
-          bottom: 10%;
+          bottom: 13%;
           right: 15%;
         }
       }
@@ -15532,6 +15532,45 @@ body a.filter-link.active:after {
   }
 }
 
+.owl {
+    &-nav {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      width: max-content;
+      position: absolute;
+      right: 0;
+      margin-top: 2.5rem;
+    }
+    &-dots {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      left: 0;
+      margin-top: 2.5rem;
+      height: 56px;
+    }
+    &-dot {
+      background-color: $neutral!important;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      &.active {
+        background-color: $black!important;
+      }
+    }
+    &-prev, &-next {
+      font-size: 18px;
+      border: 1px solid $black!important;
+      border-radius: 50%;
+      padding: 16px!important;
+      width: 56px;
+      height: 56px;
+    }
+}
+
 
 .lame--partenaire {
   z-index:1;
@@ -15593,7 +15632,7 @@ body a.filter-link.active:after {
 }
 
 
-.lame--etude-cas .card {
+.case__study .card {
   border-radius: 14px;
   padding: 1rem;
   display: flex;
@@ -15602,25 +15641,25 @@ body a.filter-link.active:after {
   height: 450px;
 }
 
-.lame--etude-cas .card-link {
+.case__study .card-link {
   display: flex;
   text-decoration: none;
   color: inherit;
 }
 
-.lame--etude-cas .card-logo {
+.case__study .card-logo {
 	width: 6rem;
 	height: 3rem;
 }
 
-.lame--etude-cas .card-header-etude {
+.case__study .card-header-etude {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   position: relative;
 }
 
-.lame--etude-cas .card-logo-container,
+.case__study .card-logo-container,
 .lame--etude-cas .tag-container {
   display: flex;
   align-items: center;
@@ -15632,7 +15671,7 @@ body a.filter-link.active:after {
   align-items: flex-end;
 }
 
-.lame--etude-cas .card--title {
+.case__study .card--title {
   font-size: 22px;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -15640,7 +15679,7 @@ body a.filter-link.active:after {
   color: #000000;
 }
 
-.lame--etude-cas .card--description {
+.case__study .card--description {
   font-size: 16px;
   color: #110612;
   opacity: 0.8;
@@ -15648,25 +15687,25 @@ body a.filter-link.active:after {
 
 /* Responsive adjustments */
 @media (max-width: 992px) {
-  .lame--etude-cas .card {
+  .case__study .card {
     height: auto;
     margin: 10px 0;
     display: flex;
     flex-direction: column;
   }
 
-  .lame--etude-cas .card-header-etude {
+  .case__study .card-header-etude {
     flex-direction: column; 
     align-items: center;
     justify-content: center;
     align-content: center;
   }
 
-  .lame--etude-cas .card-logo-container {
+  .case__study .card-logo-container {
     margin-bottom: 10px;
   }
 
-  .lame--etude-cas .card-logo {
+  .case__study .card-logo {
     width: 125px;
     height: 40px;
     object-fit: contain;
@@ -15677,13 +15716,13 @@ body a.filter-link.active:after {
     text-align: center;
   }
 
-  .lame--etude-cas .card--title {
+  .case__study .card--title {
     font-size: 18px;
     margin-top: 10px;
     text-align: center;
   }
 
-  .lame--etude-cas .card--description {
+  .case__study .card--description {
     font-size: 14px;
     text-align: center;
   }
