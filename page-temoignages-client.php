@@ -82,30 +82,12 @@
                         endif;
                         ?>
                     </div>
-                    
                     <div class="row justify-content-center mt-5">
                         <div class="col-auto text-center">
                             <a href="<?php echo $temoignages_list_link; ?>" class="btn color-btn-dark">Découvrir tous les témoignages</a>
                         </div>
                     </div>
                 </div>
-
-                <!--div class="row g-4 mt-5">
-                    <?php 
-                    /*$case_studies = get_field('etudes_cas'); 
-                    if ($case_studies && !empty($case_studies)):
-                        foreach ($case_studies as $case_study):
-                            $case_study_fields = get_fields($case_study->ID);
-                            include(get_template_directory() . '/template-parts/card-etude-cas-component.php');
-                        endforeach; 
-                    endif; */
-                    ?>
-                    <div class="row justify-content-center mt-5">
-                        <div class="col-auto text-center">
-                            <a href="<?php /* echo $temoignages_list_link; */ ?>" class="btn color-btn-dark">Découvrir tous les témoignages</a>
-                        </div>
-                    </div>
-                </div-->
             </div>
         </div>
     </section>

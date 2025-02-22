@@ -1,0 +1,91 @@
+.page {
+    &__temoignages {
+        overflow: hidden;
+        &__header {
+            p {
+                width: 55%;
+                line-height: 24px;
+            }
+            a {
+                width: auto;
+                line-height: 20px;
+            }
+            &__logo {
+                width: 155px;
+                height: 74px;
+                border-radius: 8px;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 90px;
+                }
+                &--lime {
+                    background-color: $lime;
+                    left: 10%;
+                    top: 18%
+                }
+                &--black {
+                    background-color: $black;
+                    top: 30%;
+                    right: 6%;
+                    img {
+                    filter: invert(1);
+                    }
+                }
+                &--grey {
+                    background-color: $grey;
+                    bottom: 8%;
+                    left: 17%;
+                }
+                &--peach {
+                    background-color: $peach;
+                    bottom: 13%;
+                    right: 15%;
+                }
+            }
+        }
+        &__discover {
+            &__card {
+                padding: 80px 64px;
+                border-radius: 32px;
+                background-color: $lavender;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                & h2 {
+                    width: 65%;
+                }
+                &__links {
+                    width: 85%;
+                }
+                & .color-btn-dark {
+                    padding: 6px 20px !important;
+                    line-height: 24px !important;
+                    font-weight: 400 !important;
+                }
+                &__logo {
+                    position: absolute;
+                    z-index: 0;
+                    right: 0;
+                    bottom: -1.25rem;
+                    max-height: 95%;
+                    opacity: .50;
+                }
+            }
+        }
+        &__list {
+            &__header__logo {
+                position: absolute;
+                z-index: 0;
+                left: -2.5rem;
+                width: 366px;
+                bottom: -2.5rem;
+                opacity: .25;
+            }
+        }
+    }
+}

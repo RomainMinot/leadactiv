@@ -45,13 +45,13 @@ $page_id = get_queried_object_id();
                 <!-- Newsletter Signup Section -->
                 <div class="d-flex align-items-center justify-content-left">
                     <div class="footer_newsletter-wrapper">
-                            <div class="max-width-small">
+                            <div class="max-width-small mb-5">
                                 <div class="margin-bottom margin-xsmall">
-                                    <div class="small-title f-36 mb-1 mb-md-2 mt-0">
+                                    <div class="f-24 mb-1 mb-md-2 mt-0">
                                         <?php echo esc_html($option_fields['newsletter_title']); ?>
                                     </div>
                                 </div>
-                                <p class="f-16 mb-4 text-white">
+                                <p class="f-16 mb-4 fw-normal lh-base text-white">
                                     <?php echo esc_html($option_fields['newsletter_text']); ?>
                                 </p>
                             </div>
