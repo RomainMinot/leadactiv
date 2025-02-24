@@ -16,7 +16,7 @@
     <!-- Hero -->
     <section class="position-relative d-flex bg-deep-purple align-items-center">
         <div class="container__lg">
-            <div class="py-3 pt-md-8 pb-md-9 mt-5">      
+            <div class="py-3 pt-md-9 pb-md-9 mt-5">      
                 <div class="relative row justify-content-center h-100">
                     <div class="col-md-8 col-10 col-lg-8">
                         <div class="d-flex flex-column align-items-center justify-content-center text-center">

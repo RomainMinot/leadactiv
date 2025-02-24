@@ -10873,6 +10873,9 @@ fieldset:disabled .btn {
   .pt-md-8 {
     padding-top:6rem !important;
   }
+  .pt-md-9 {
+    padding-top: 7.5rem !important;
+  }
   .pt-md-10 {
     padding-top: 16vh !important;
   }
@@ -13234,6 +13237,14 @@ body footer a {
   margin-bottom: .5rem;
 }
 
+input:focus-visible {
+  outline: 1.5px solid $lavender;
+}
+
+select:focus-visible {
+  outline: 1px solid $lavender;
+}
+
 .input {
   font-size: 14px;
   line-height: 24px;
@@ -13288,6 +13299,7 @@ select::after {
   width: 100%;
   max-width: 300px;
   background-color: #f5f5f5;
+  border: unset;
 }
 
 /* Mobile-specific adjustments */
