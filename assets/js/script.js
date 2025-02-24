@@ -1,3 +1,5 @@
+import IsotopeGrid from './IsotopeGrid';
+
 var jQueryBridget = require('jquery-bridget');
 //Filtering and Sorting
 var Isotope = require('isotope-layout');
@@ -773,3 +775,9 @@ document.addEventListener('DOMContentLoaded', function () {
         checkedRadio.dispatchEvent(new Event('change'));
     }
 });
+
+// New script
+window.onload = () => {
+    if (document.querySelector('.grid__studies'))
+        new IsotopeGrid('.grid__studies', '.grid__studies--item', '.grid__studies--filter', 'every');
+}

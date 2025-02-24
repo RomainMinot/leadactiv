@@ -7943,6 +7943,14 @@ fieldset:disabled .btn {
   text-overflow:ellipsis;
   white-space:nowrap
 }
+.truncate-two-lines {
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .vr {
   display:inline-block;
   align-self:stretch;
@@ -13253,6 +13261,7 @@ select:focus-visible {
   border: 1px solid $neutral;
   border-radius: 5px;
   width: 100%;
+  
   &--search {
     background-color: $grey;
     border: unset;

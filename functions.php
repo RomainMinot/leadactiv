@@ -184,3 +184,48 @@ function enqueue_custom_fonts() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_fonts');
 
+function add_new_taxonomy($name, $hierarchical) {
+    $pluralName = $name . 's';
+    $upperName = ucfirst($name);
+    $upperPluralName = ucfirst($pluralName);
+    $labels = array(
+        'name'              => _x($upperPluralName, 'taxonomy general name'),
+        'singular_name'     => _x($upperName, 'taxonomy singular name'),
+        'search_items'      => __('Rechercher des '.$pluralName),
+        'all_items'         => __('Toutes les '.$pluralName),
+        'parent_item'       => __($upperName.' Parent'),
+        'parent_item_colon' => __($upperName.' Parent:'),
+        'edit_item'         => __('Éditer le '.$upperName),
+        'update_item'       => __('Mettre à jour le '.$upperName),
+        'add_new_item'      => __('Ajouter une nouvelle '.$upperName),
+        'new_item_name'     => __('Nom de la nouvelle '.$upperName),
+        'menu_name'         => __('Nouvelles '.$upperPluralName),
+    );
+
+    $args = array(
+        'hierarchical'      => $hierarchical,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array('slug' => 'new-'.$name),
+    );
+
+    register_taxonomy($name, array('etudedecas'), $args);
+}
+add_action('init', function() {
+    add_new_taxonomy('fonction', 'etude_de_cas', false);
+});
+add_action('init', function() {
+    add_new_taxonomy('localisation', 'etude_de_cas', false);
+});
+
+function getClassesForIsotope($array) {
+    $classes = '';
+    if ($array) {
+        foreach ($array as $item) {
+            $classes .= $item->slug . ' ';
+        }
+    }
+    return $classes;
+}

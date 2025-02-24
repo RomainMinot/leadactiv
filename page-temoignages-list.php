@@ -47,20 +47,59 @@
                             <div class="w-100 d-flex align-items-center justify-content-center flex-nowrap gap-2">
                                 <div class="flex-1">
                                     <label for="selectSector" class="label">Secteur</label>
-                                    <select id="selectSector" class="input" name="sector">
-                                        <option value="direction_marketing">Direction marketing</option>
+                                    <select id="selectSector" class="grid__studies--filter input" name="sector">
+                                        <option value="*">-- Secteur d'activité</option>
+                                        <?php
+                                            $sectors = get_terms([
+                                                'taxonomy' => 'typeetudedecas',
+                                                'hide_empty' => true
+                                            ]);
+                                            if (count($sectors) > 0): 
+                                                foreach ($sectors as $sector): 
+                                        ?>
+                                            <option value=".<?php echo $sector->slug ?>"><?php echo $sector->name; ?></option>
+                                        <?php
+                                                endforeach; 
+                                            endif; 
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="flex-1">
                                     <label for="selectFonction" class="label">Fonction ciblée</label>
-                                    <select id="selectFonction" class="input" name="fonction">
-                                        <option value="assistant_de_direction">Assistant(e) de direction</option>
+                                    <select id="selectFonction" class="grid__studies--filter input" name="fonction">
+                                        <option value="*">-- Fonction ciblée</option>
+                                        <?php
+                                            $fonctions = get_terms([
+                                                'taxonomy' => 'fonction',
+                                                'hide_empty' => true
+                                            ]);
+                                            if (count($fonctions) > 0): 
+                                                foreach ($fonctions as $fonction): 
+                                        ?>
+                                            <option value=".<?php echo $fonction->slug ?>"><?php echo $fonction->name; ?></option>
+                                        <?php
+                                                endforeach; 
+                                            endif; 
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="flex-1">
                                     <label for="selectLocalisation" class="label">Localisation</label>
-                                    <select id="selectLocalisation" class="input" name="localisation">
-                                        <option value="france">France</option>
+                                    <select id="selectLocalisation" class="grid__studies--filter input" name="localisation">
+                                        <option value="*">-- Localisation</option>
+                                        <?php
+                                            $localisations = get_terms([
+                                                'taxonomy' => 'localisation',
+                                                'hide_empty' => true
+                                            ]);
+                                            if (count($localisations) > 0): 
+                                                foreach ($localisations as $localisation): 
+                                        ?>
+                                            <option value=".<?php echo $localisation->slug ?>"><?php echo $localisation->name; ?></option>
+                                        <?php
+                                                endforeach; 
+                                            endif; 
+                                        ?>
                                     </select>
                                 </div>
                             </div>
@@ -95,7 +134,7 @@
                     </div>
                 </div>
                 <!-- List -->
-                <div class="row g-4">
+                <div class="grid__studies row g-4 overflow-y-hidden">
                     <?php
                     if ($case_studies && !empty($case_studies)) {
                         foreach ($case_studies as $index => $case_study) {
