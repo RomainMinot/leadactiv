@@ -39,9 +39,10 @@
     <section class="page__temoignages__list bg-white position-relative">
         <div class="container__lg">
             <div class="py-5 pt-2 pb-md-8">
-                <!-- Filter -->
+                <!-- Filter section -->
                 <div class="py-4 mb-2">
                     <div class="row d-flex align-items-stretch justify-content-between">
+                        <!-- Filters -->
                         <div class="col-8">
                             <p class="w-100 mb-3">Filtre</p>
                             <div class="w-100 d-flex align-items-center justify-content-center flex-nowrap gap-2">
@@ -104,9 +105,10 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Search -->
                         <div class="col-3 d-flex flex-column align-items-start justify-content-between">
                             <p class="w-100 mb-3">Recherche</p>
-                            <input type="text" class="input input--search" placeholder="Search" name="search">
+                            <input type="search" class="input input--search grid__studies--search" placeholder="Search" name="search">
                         </div>
                     </div>
                     <div class="row my-3">

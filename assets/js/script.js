@@ -779,5 +779,5 @@ document.addEventListener('DOMContentLoaded', function () {
 // New script
 window.onload = () => {
     if (document.querySelector('.grid__studies'))
-        new IsotopeGrid('.grid__studies', '.grid__studies--item', '.grid__studies--filter', 'every');
+        new IsotopeGrid('.grid__studies', '.grid__studies--item', '.grid__studies--filter', '.grid__studies--search', 'every');
 }
