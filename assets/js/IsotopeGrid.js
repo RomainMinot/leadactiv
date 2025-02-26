@@ -9,11 +9,46 @@ export default class IsotopeGrid {
         this.sortingType = sortingType;
         this.filterSelects = [];
         this.searchText = ''; 
-        
-        this.isotope = new Isotope(this.gridSelector, {
+
+        // Capture du contexte de la classe
+        const self = this;
+
+        this.isotope = $(this.gridSelector).isotope({
             itemSelector: this.itemSelector,
             layoutMode: 'fitRows',
+            filter: function() {
+                const selectionFilters = self.getSelectionFilters();
+                
+                const $item = $(this);
+
+                // Si pas de filtres actifs
+                if (self.searchText === '' && selectionFilters === '*') {
+                    return true;
+                }
+
+                // Vérifie les filtres de sélection
+                let matchesSelections = true;
+                if (selectionFilters !== '*') {
+                    const filterClasses = selectionFilters.split(',').map(f => f.trim());
+                    matchesSelections = filterClasses.some(className => 
+                        $item.is(className)
+                    );
+                }
+                
+                if (self.searchText === '') {
+                    return matchesSelections;
+                }
+
+                // Recherche dans le contenu du titre
+                const $title = $item.find('.card--title');
+                const matchesSearch = $title.length ? 
+                    $title.text().toLowerCase().includes(self.searchText.toLowerCase()) :
+                    $item.text().toLowerCase().includes(self.searchText.toLowerCase());
+
+                return matchesSearch && matchesSelections;
+            }
         });
+
         this.initItems();
         this.initFilters();
         this.initSearch();
@@ -33,7 +68,7 @@ export default class IsotopeGrid {
         this.filterSelects = document.querySelectorAll(this.filterSelector);
         this.filterSelects.forEach(select => {
             select.addEventListener('change', () => {
-                this.isotope.arrange({ filter: this.combineFilters() });
+                this.isotope.isotope();
             });
         });
     }
@@ -42,21 +77,12 @@ export default class IsotopeGrid {
         const searchInput = document.querySelector(this.searchInputSelector);
         if (searchInput) {
             searchInput.addEventListener('keyup', debounce(() => {
-                this.searchText = new RegExp(searchInput.value, 'gi');
-                this.isotope.arrange({ filter: this.combineFilters() });
+                this.searchText = searchInput.value;
+                this.isotope.isotope();
             }, 200));
         }
     }
-
-    combineFilters() {
-        const selectionFilters = this.getSelectionFilters();
-        const searchFilter = this.getSearchFilter();
-        console.log(searchFilter);
-        //this.searchText ? itemElem.textContent.match(this.searchText) : true;
-        return selectionFilters;
-       
-    }
-
+    
     getSelectionFilters() {
         let filters = [];
         this.filterSelects.forEach(select => {
@@ -71,10 +97,6 @@ export default class IsotopeGrid {
         return this.sortingType === 'some' 
             ? filters.map((filter, index) => index < filters.length - 1 ? `${filter}, `: filter).join('')
             : filters.map(filter => filter).join('');
-    }
-
-    getSearchFilter() {
-        return this.searchText === '' ? '*' : this.searchText;
     }
 }
 
