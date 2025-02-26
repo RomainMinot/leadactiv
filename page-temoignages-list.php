@@ -113,24 +113,10 @@
                     </div>
                     <div class="row my-3">
                         <div class="col-12">
-                            <div class="d-flex flex-row align-items-center justify-content-start flex-wrap gap-2">
-                                <div class="tag tag-light-purple">
-                                    <span>Alimentation & Hôtellerie</span>
-                                    <i class="ml-2 fas fa-times"></i>
-                                </div>
-                                <div class="tag tag-gray">
-                                    <span>Direction marketing</span>
-                                    <i class="ml-2 fas fa-times"></i>
-                                </div>
-                                <div class="tag tag-gray">
-                                    <span>Assistant(e) de direction</span>
-                                    <i class="ml-2 fas fa-times"></i>
-                                </div>
-                                <div class="tag tag-gray">
-                                    <span>France</span>
-                                    <i class="ml-2 fas fa-times"></i>
-                                </div>
-                                <button class="page__temoignages__list__filters__clear">Clear filters <i class="ml-1 fas fa-times"></i></button>
+                            <div id="filterTagsContainer" class="d-flex flex-row align-items-center justify-content-start flex-wrap gap-2">
+                                <button class="page__temoignages__list__filters__clear d-none">
+                                    Clear filters <i class="ml-1 fas fa-times"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
