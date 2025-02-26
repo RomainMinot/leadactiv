@@ -108,7 +108,7 @@
                             if (count($filters) > 0): 
                                 foreach ($filters as $filter): 
                         ?>
-                            <a href="<?php echo $temoignages_list_link; ?>" class="btn color-btn-dark" alt="<?php echo $filter->slug; ?>"><?php echo $filter->name; ?></a>
+                            <a href="<?php echo $temoignages_list_link.'#'.$filter->slug; ?>" class="btn color-btn-dark" alt="<?php echo $filter->slug; ?>"><?php echo $filter->name; ?></a>
                         <?php
                                 endforeach; 
                             endif; 

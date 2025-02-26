@@ -776,8 +776,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// New script
-window.onload = () => {
+// Second part script
+document.addEventListener('DOMContentLoaded', () => {
+    // Init isotope filters case studies
     if (document.querySelector('.grid__studies'))
         new IsotopeGrid('.grid__studies', '.grid__studies--item', '.grid__studies--filter', '.grid__studies--search', '.page__temoignages__list__filters__clear', 'every');
-}
+});

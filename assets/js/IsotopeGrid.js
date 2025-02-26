@@ -1,4 +1,3 @@
-
 export default class IsotopeGrid {
     /**
      * @param {string} gridSelector - Sélecteur du conteneur grid
@@ -12,10 +11,17 @@ export default class IsotopeGrid {
         this.initializeIsotope();
         this.initializeComponents();
         this.initClearButton();
+        this.checkUrlHash();
     }
 
     /**
      * Initialise les propriétés de la classe
+     * @param {string} gridSelector - Sélecteur du conteneur grid
+     * @param {string} itemSelector - Sélecteur des éléments à filtrer
+     * @param {string} filterSelector - Sélecteur des éléments de filtrage
+     * @param {string} searchInputSelector - Sélecteur de l'input de recherche
+     * @param {string} clearButtonSelector - Sélecteur du bouton de réinitialisation
+     * @param {string} sortingType - Type de tri ('some' pour OR, autre pour AND)
      */
     initializeProperties(gridSelector, itemSelector, filterSelector, searchInputSelector, clearButtonSelector, sortingType) {
         this.gridSelector = gridSelector;
@@ -59,6 +65,24 @@ export default class IsotopeGrid {
         this.clearButton = document.querySelector(this.clearButtonSelector);
         if (this.clearButton) {
             this.clearButton.addEventListener('click', () => this.clearAllFilters());
+        }
+    }
+
+    /**
+     * Vérifie le hash de l'URL et active le filtre correspondant
+     */
+    checkUrlHash() {
+        const hash = window.location.hash.substring(1);
+        if (!hash) return;
+        
+        const sectorSelect = Array.from(this.filterSelects).find(select => select.name === 'sector');
+        if (!sectorSelect) return;
+        
+        const option = Array.from(sectorSelect.options).find(opt => opt.value === `.${hash}`);
+        if (option) {
+            sectorSelect.value = option.value;
+            this.addFilter(option.value, option.text, 'sector');
+            this.updateFilters();
         }
     }
 
@@ -176,6 +200,9 @@ export default class IsotopeGrid {
 
     /**
      * Ajoute un filtre et met à jour le tag correspondant
+     * @param {string} value - Valeur du filtre à ajouter
+     * @param {string} label - Texte à afficher pour le filtre
+     * @param {string} selectName - Nom du select associé au filtre
      */
     addFilter(value, label, selectName) {
         this.checkFilter(selectName);
@@ -183,8 +210,10 @@ export default class IsotopeGrid {
         this.showFilterTag(label, value, selectName);
     }
 
-     /**
+    /**
      * Retire un filtre et cache le tag correspondant
+     * @param {HTMLElement} filterTag - Élément HTML du tag à supprimer
+     * @param {string} value - Valeur du filtre à retirer
      */
     removeFilter(filterTag, value) {
         this.activeFilters.delete(value);
@@ -198,7 +227,8 @@ export default class IsotopeGrid {
     }
 
     /**
-     * Check if filter category already exists
+     * Vérifie si un filtre de la même catégorie existe déjà
+     * @param {string} selectName - Nom du select à vérifier
      */
     checkFilter(selectName) {
         const tags = document.querySelectorAll('.tag');
