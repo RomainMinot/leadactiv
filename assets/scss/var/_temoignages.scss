@@ -144,3 +144,14 @@
         color: white!important;
     }
 }
+
+.single {
+    &__etude {
+        &__tags {
+            gap: 32px;
+            .label {
+                font-size: 14px;
+            }
+        }
+    }
+}

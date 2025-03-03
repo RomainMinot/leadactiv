@@ -41,7 +41,7 @@
     // Define arrays for pages to check background and button styling
     $navbar_home_pages = ['agence-de-prospection-linkedin', 'agence-de-prospection-email', 'agence-prospection-externalisee', 'agence-generation-leads', 'temoignages-list', 'prospection-generation-leads-editeur-logiciel', 'generation-leads-cabinet-agence-conseil', 'generation-leads-cabinets-recrutement', 'prospection-cabinet-comptable', 'prospection-agence-esn', 'prospection-commerciale-hotels', 'prospection-commerciale-industrie'];
     $navbar_special_pages = ['notre-methode', 'lagence', 'contact', 'temoignages-client'];
-    $navbar_blog_pages = ['etudes-de-cas', 'blog', 'page__blog'];
+    $navbar_blog_pages = ['etudesdecas', 'blog', 'page__blog'];
 
     // Set navbar and button classes based on page
     if (is_front_page() || is_page($navbar_home_pages)) {

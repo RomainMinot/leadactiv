@@ -5226,6 +5226,7 @@ fieldset:disabled .btn {
 /* Single Études de cas, Single Blog */
 .navbar-single {
   background-color: #FFFFFF;
+  border-bottom: 1px solid $teal-o;
 }
 .navbar-single .navbar-nav .nav-link, .navbar-single .navbar-brand, .navbar-single .btn-menu a {
   color: #110612 !important;
@@ -15134,6 +15135,7 @@ body a.filter-link.active:after {
     display: none;
   }
 }
+
 .single__etude--header {
   background-color: #fff;
   position: relative;
@@ -15141,7 +15143,14 @@ body a.filter-link.active:after {
   min-height: 80vh;
   display: flex;
   align-items: center;
+  .header-logo img {
+    max-width: 165px;
+    min-width: 125px;
+    max-height: 55px;
+    object-fit: contain;
+  }
 }
+
 .text-background-container {
   position: relative;
  
@@ -15150,10 +15159,10 @@ body a.filter-link.active:after {
 .background-image-left {
   position: absolute;
   bottom: 0;
-  top: auto;
-  left: 15%;
+  top: 28%;
+  left: 17.5%;
   transform: translate(-50%, 0%);
-  height: 90%;
+  height: 85%;
   z-index: 0;
 }
 .header-logo {
@@ -15198,6 +15207,8 @@ body a.filter-link.active:after {
 .video-container {
   position: relative;
   width: 100%;
+  height: 420px;
+  aspect-ratio: 16/9;
   cursor: pointer;
 }
 
