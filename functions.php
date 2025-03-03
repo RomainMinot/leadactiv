@@ -229,3 +229,9 @@ function getClassesForIsotope($array) {
     }
     return $classes;
 }
+
+/* 
+add_action('wp_head', function() {
+    global $template;
+    echo "<!-- Template utilisé : " . basename($template) . " -->";
+}); */
