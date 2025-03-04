@@ -128,6 +128,9 @@ body .termina_demi {
 body .rustica {
   font-family:'Albert Sans', sans-serif ;
 }
+body .f-32 {
+  font-size:32px
+}
 body .f-40 {
   font-size:40px
 }
@@ -15250,17 +15253,30 @@ body a.filter-link.active:after {
   z-index: 1;
 }
 
+.page__etude--chiffres {
+  padding: 80px 0px;
+}
 
-.page__etude--chiffres__left,
+.page__etude--chiffres__left {
+  width: 33.33%;
+  & p {
+    font-size: 10px!important;
+    line-height: 15px!important;
+  }
+}
+
 .page__etude--chiffres__right {
-
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  z-index: 2;
+  width: 66.66%;
+  gap: 72px;
+  .vr {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 70px;
+    background-color: #fff;
+    width: 1px;
+    opacity: 1;
+  }
 }
 
 .page__etude--content__left {
@@ -15276,6 +15292,7 @@ body a.filter-link.active:after {
   height: auto;
   aspect-ratio: 16 / 11;
   object-fit: cover;
+
 }
 
 .page__etude--chiffres__left .nom_prenom {
@@ -15293,11 +15310,6 @@ body a.filter-link.active:after {
   
 }
 
-.page__etude--chiffres__right {
-  background-color: transparent;
-  
-}
-
 .page__etude--chiffres__right h3 {
   font-size: 40px;
   margin-bottom: 50px;
@@ -15306,17 +15318,17 @@ body a.filter-link.active:after {
 }
 
 .page__etude--chiffres--chiffre {
-  font-size: 48px;
+  font-size: 64px;
+  color: $lavender;
   margin-bottom: 10px;
   width: 100%;
-  text-align: center;
 }
 
 .page__etude--chiffres--legend {
-  font-size: 16px;
-  margin-bottom: 20px;
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #fff;
   width: 100%;
-  text-align: center;
 }
 
 
