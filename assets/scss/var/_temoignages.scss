@@ -147,10 +147,22 @@
 
 .single {
     &__etude {
+        .label {
+            font-size: 14px;
+            font-weight: 300;
+            margin-bottom: .25rem!important;
+        }
         &__tags {
             gap: 32px;
-            .label {
-                font-size: 14px;
+            
+        }
+        &__sticky {
+            padding: 64px 32px;
+            border-radius: 16px;
+            &--specs {
+                display: grid;
+                grid-template-columns: 1fr max-content;
+                gap: 16px;
             }
         }
     }

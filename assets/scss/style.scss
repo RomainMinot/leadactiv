@@ -8821,6 +8821,42 @@ fieldset:disabled .btn {
 .p-5 {
   padding:3rem !important
 }
+.pl-0 {
+  padding-left:0 !important
+}
+.pl-1 {
+  padding-left:.25rem !important
+}
+.pl-2 {
+  padding-left:.5rem !important
+}
+.pl-3 {
+  padding-left:1rem !important
+}
+.pl-4 {
+  padding-left:1.5rem !important
+}
+.pl-5 {
+  padding-left:3rem !important
+}
+.pr-0 {
+  padding-right:0 !important
+}
+.pr-1 {
+  padding-right:.25rem !important
+}
+.pr-2 {
+  padding-right:.5rem !important
+}
+.pr-3 {
+  padding-right:1rem !important
+}
+.pr-4 {
+  padding-right:1.5rem !important
+}
+.pr-5 {
+  padding-right:3rem !important
+}
 .px-0 {
   padding-right:0 !important;
   padding-left:0 !important
@@ -14210,6 +14246,7 @@ h2.faq-title {
 .tag-green,
 .tag-bleu,
 .tag-gray,
+.tag-white,
 .tag-orange,
 .tag-saumon,
 .tag-purple,
@@ -15148,7 +15185,7 @@ body a.filter-link.active:after {
   align-items: center;
   .header-logo img {
     max-width: 165px;
-    min-width: 125px;
+    min-width: 150px;
     max-height: 55px;
     object-fit: contain;
   }
@@ -15162,7 +15199,7 @@ body a.filter-link.active:after {
 .background-image-left {
   position: absolute;
   bottom: 0;
-  top: 28%;
+  top: 30%;
   left: 17.5%;
   transform: translate(-50%, 0%);
   height: 85%;
@@ -15183,14 +15220,14 @@ body a.filter-link.active:after {
   font-weight: medium;
   color: #27454F;
   margin-bottom: 1rem;
-  max-width: 640px;
+  max-width: 90%;
 }
 
 .single__etude--header .single__etude--header--descr {
-  font-size: 20px;
   color: #333;
   margin-bottom: 2rem;
-  max-width: 520px; 
+  max-width: 85%; 
+  line-height: 24px;
 }
 
 .single__etude--header .header-media .video-embed,
@@ -15334,21 +15371,40 @@ body a.filter-link.active:after {
 
 
 .lame_listes_texte__content {
-  max-width: 520px;
-  height: 208px;  
+  padding: 80px 48px;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  &--logo {
+    position: absolute;
+    right: 130px;
+    width: 445px;
+    bottom: 70px;
+    z-index: 0;
+  }
+  &--texts {
+    z-index: 1;
+    & p:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    & p:last-child {
+      margin-bottom: 0!important;
+    }
+  }
 }
 
-.lame_listes_texte__content .f-48{
+.lame_listes_texte__content .f-48 {
   font-size: 48px;
   font-weight: 400;
-  margin-bottom: 30px;
   text-align: left;  
-}
-.lame_listes_texte__content p{
-  font-size: 16px;
-  margin-bottom: 20px;
-  text-align: left; 
+  color: $black;
   
+}
+.lame_listes_texte__content p {
+  font-size: 16px;
+  text-align: left; 
 }
 
 .lame_listes_texte__card-container {
