@@ -235,3 +235,4 @@ add_action('wp_head', function() {
     global $template;
     echo "<!-- Template utilisé : " . basename($template) . " -->";
 }); */
+add_filter('show_admin_bar', '__return_false');
