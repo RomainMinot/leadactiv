@@ -558,9 +558,17 @@ document.addEventListener('DOMContentLoaded', function() {
         thumbnail.addEventListener('click', function() {
             const videoContainer = thumbnail.closest('.video-container');
             const videoEmbed = videoContainer.querySelector('.video-embed');
+            const iframe = videoEmbed.querySelector('iframe');
 
             // Hide the thumbnail and overlay
             thumbnail.style.display = 'none';
+
+            // Get the original video source
+            const videoSrc = iframe.getAttribute('src');
+
+            // Check if the videoSrc already has parameters
+            const separator = videoSrc.includes('?') ? '&' : '?';
+            iframe.setAttribute('src', videoSrc + separator + 'autoplay=1&rel=0');
 
             // Show the video embed
             videoEmbed.style.display = 'block';

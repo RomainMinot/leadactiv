@@ -14987,6 +14987,7 @@ body a.filter-link.active:after {
     min-width: 150px;
     max-height: 55px;
     object-fit: contain;
+    object-position: left;
   }
 }
 
@@ -15036,6 +15037,10 @@ body a.filter-link.active:after {
   width: 100%;
   border-radius: 1.5rem; 
   object-fit: cover;
+}
+
+.single__etude--header .header-media iframe {
+  width: revert-layer;
 }
 
 .single__etude--header .header-media {

@@ -4,6 +4,9 @@
 // $f-gotham: 'gotham';
 // $font-family-base: $f-gotham;
 
+$font-primary: 'Sora', sans-serif;
+$font-secondary: 'Albert Sans', sans-serif;
+
 $enable-negative-margins: true;
 
 $bp-xxxl: 1600px;
@@ -64,7 +67,7 @@ body {
   font-family: 'rustica';
 
   h1,h2,h3,h4,h5,h6,.title{
-    font-family: "termina-demi", serif;
+    font-family: "Sora", sans-serif;
 
     strong{
       color: $secondary;
@@ -72,7 +75,7 @@ body {
 
     p{
       margin-bottom: 0;
-      font-family: "termina-demi", serif;
+      font-family: "Sora", sans-serif;
     }
   }
 
