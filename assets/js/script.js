@@ -789,4 +789,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // Init isotope filters case studies
     if (document.querySelector('.grid__studies'))
         new IsotopeGrid('.grid__studies', '.grid__studies--item', '.grid__studies--filter', '.grid__studies--search', '.page__temoignages__list__filters__clear', 'every');
+    
+    // Sticky 
+    const stickyElement = document.querySelector('.single__etude__sticky');
+    window.addEventListener('scroll', () => {
+        if (stickyElement) handleStickySection();
+    });
+
+    function handleStickySection() {
+        const distanceToTop = 105;
+        const rect = stickyElement.parentElement.getBoundingClientRect();
+        const stickyRect = stickyElement.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        
+        if (isVisible) {
+            const distanceFromTop = rect.top;
+            if (stickyRect.bottom >= rect.bottom) {
+                stickyElement.style.position = 'relative';
+                stickyElement.style.top = '0px';
+            } else if (distanceFromTop <= distanceToTop) {
+                stickyElement.style.position = 'fixed';
+                stickyElement.style.top = `${distanceToTop}px`;
+            } else {
+                stickyElement.style.position = 'relative';
+                stickyElement.style.top = '0px';
+            }
+        } else {
+            stickyElement.style.position = 'relative';
+            stickyElement.style.top = '0px';
+        }
+    }
 });

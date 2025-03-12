@@ -157,6 +157,10 @@
             
         }
         &__sticky {
+            position: relative;//fixed
+            top: 0px;//105px
+            align-self: flex-start;
+            z-index: 1000;
             padding: 64px 32px;
             border-radius: 16px;
             &--specs {
