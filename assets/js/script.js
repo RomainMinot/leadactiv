@@ -790,33 +790,81 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.grid__studies'))
         new IsotopeGrid('.grid__studies', '.grid__studies--item', '.grid__studies--filter', '.grid__studies--search', '.page__temoignages__list__filters__clear', 'every');
     
-    // Sticky 
+    // Sticky //
     const stickyElement = document.querySelector('.single__etude__sticky');
-    window.addEventListener('scroll', () => {
-        if (stickyElement) handleStickySection();
-    });
+    const stickyItems = document.querySelectorAll('.single__etude__sticky__item');
+    const sections = document.querySelectorAll('.single__etude__section');
+
+    if (stickyElement) {
+        window.addEventListener('scroll', handleStickySection);
+        observeSections();
+    }
 
     function handleStickySection() {
         const distanceToTop = 105;
         const rect = stickyElement.parentElement.getBoundingClientRect();
         const stickyRect = stickyElement.getBoundingClientRect();
-        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
         
-        if (isVisible) {
-            const distanceFromTop = rect.top;
-            if (stickyRect.bottom >= rect.bottom) {
-                stickyElement.style.position = 'relative';
-                stickyElement.style.top = '0px';
-            } else if (distanceFromTop <= distanceToTop) {
-                stickyElement.style.position = 'fixed';
-                stickyElement.style.top = `${distanceToTop}px`;
-            } else {
-                stickyElement.style.position = 'relative';
-                stickyElement.style.top = '0px';
-            }
-        } else {
-            stickyElement.style.position = 'relative';
-            stickyElement.style.top = '0px';
+        if (!isElementVisible(rect)) {
+            resetStickyElement();
+            return;
         }
+
+        const distanceFromTop = rect.top;
+
+        if (isStickyConditionMet(stickyRect, rect, distanceFromTop, distanceToTop)) {
+            setStickyPosition('fixed', distanceToTop);
+        } else {
+            resetStickyElement();
+        }
+    }
+
+    function isElementVisible(rect) {
+        return rect.top < window.innerHeight && rect.bottom > 0;
+    }
+
+    function isStickyConditionMet(stickyRect, rect, distanceFromTop, distanceToTop) {
+        return stickyRect.bottom < rect.bottom && distanceFromTop <= distanceToTop;
+    }
+
+    function resetStickyElement() {
+        stickyElement.style.position = 'relative';
+        stickyElement.style.top = '0px';
+    }
+
+    function setStickyPosition(position, top) {
+        stickyElement.style.position = position;
+        stickyElement.style.top = `${top}px`;
+        
+        const landmarkSticky = document.querySelector('.landmark__sticky');
+        if (landmarkSticky) {
+            stickyElement.style.width = `${landmarkSticky.offsetWidth}px`;
+        }
+    }
+
+    function observeSections() {
+        const options = {
+            root: null, // Use the viewport as the root
+            rootMargin: '0px',
+            threshold: 0.5 // Trigger when 50% of the section is visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const id = entry.target.id;
+                const stickyItem = Array.from(stickyItems).find(item => item.dataset.anchor.includes(id));
+                
+                if (entry.isIntersecting) {
+                    stickyItems.forEach(item => item.classList.remove('single__etude__sticky__item--active'));
+                    if (stickyItem) {
+                        stickyItem.classList.add('single__etude__sticky__item--active');
+                    }
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
     }
 });

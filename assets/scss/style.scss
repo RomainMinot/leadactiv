@@ -15171,6 +15171,7 @@ body a.filter-link.active:after {
 
 
 .lame_listes_texte__content {
+  position: relative;
   padding: 80px 48px;
   border-radius: 32px;
   display: flex;
@@ -15179,9 +15180,9 @@ body a.filter-link.active:after {
   gap: 32px;
   &--logo {
     position: absolute;
-    right: 130px;
+    right: 64px;
     width: 445px;
-    bottom: 70px;
+    bottom: -32px;
     z-index: 0;
   }
   &--texts {
