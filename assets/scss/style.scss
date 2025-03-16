@@ -8934,6 +8934,9 @@ fieldset:disabled .btn {
 .pt-5 {
   padding-top:3rem !important
 }
+.pt-6 {
+  padding-top:6rem !important
+}
 .pe-0 {
   padding-right:0 !important
 }
@@ -8973,6 +8976,9 @@ fieldset:disabled .btn {
 }
 .pb-5 {
   padding-bottom:3rem !important
+}
+.pb-6 {
+  padding-bottom:6rem !important
 }
 .ps-0 {
   padding-left:0 !important
@@ -15187,6 +15193,7 @@ body a.filter-link.active:after {
   }
   &--texts {
     z-index: 1;
+    line-height: 1.5;
     & p:not(:last-child) {
       margin-bottom: 1rem;
     }
