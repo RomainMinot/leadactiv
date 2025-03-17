@@ -152,11 +152,22 @@
         display: flex;
         flex-direction: column;
         gap: 1.75rem; 
+        overflow: hidden;
         &--peach {
             background-color: $peach;
+            .temoignage__quote__bottom {
+                &::after {
+                    background-color: $peach;
+                }
+            }
         }
         &--lavender {
             background-color: $lavender;
+            .temoignage__quote__bottom {
+                &::after {
+                    background-color: $lavender;
+                }
+            }
         }
         &__icon {
             width: 48px;
@@ -193,6 +204,69 @@
             }
             &__position {
                 font-size: 12px;
+            }
+        }
+        &__bottom {
+            margin-top: 2rem;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 64px;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                width: 1800px;
+                height: 1800px;
+                border-radius: 50%;
+                top: 12.5px;
+                left: 50%;
+                transform: translateX(-50%);
+                position: absolute;
+                background: radial-gradient(circle at 50%, transparent 55%, #FFFFFFBF 90%);
+                outline: 1px solid $white;
+                outline-offset: -42.5px;
+            }
+            &::after {
+                content: '';
+                display: block;
+                width: 1800px;
+                height: 1800px;
+                border-radius: 50%;
+                top: 98.5px;
+                left: 50%;
+                transform: translateX(-50%);
+                position: absolute;
+            }
+            &__item {
+                position: relative;
+                &--down {
+                    margin-top: 25px;
+                }
+                &__label {
+                    position: absolute;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $teal;
+                    text-transform: uppercase;
+                    top: -2rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                &__icon {
+                    width: 85px;
+                    height: 85px;
+                    background-color: $white;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        width: 32px;
+                    }
+                }
             }
         }
     }

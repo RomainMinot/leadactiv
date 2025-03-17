@@ -24,8 +24,23 @@ $style = $colorType === 'peach' ? 'temoignage__quote--peach' : 'temoignage__quot
     </div>
     <?php if ($has_bottom): ?>
         <div class="temoignage__quote__bottom">
-            <div>
-                
+            <div class="temoignage__quote__bottom__item temoignage__quote__bottom__item--down">
+                <span class="temoignage__quote__bottom__item__label">Roi</span>
+                <div class="temoignage__quote__bottom__item__icon">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/money.svg" alt="Ecoute">
+                </div>
+            </div>
+            <div class="temoignage__quote__bottom__item">
+                <span class="temoignage__quote__bottom__item__label">Ecoute</span>
+                <div class="temoignage__quote__bottom__item__icon">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relume.svg" alt="Ecoute">
+                </div>
+            </div>
+            <div class="temoignage__quote__bottom__item temoignage__quote__bottom__item--down">
+                <span class="temoignage__quote__bottom__item__label">Qualité</span>
+                <div class="temoignage__quote__bottom__item__icon">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.svg" alt="Ecoute">
+                </div>
             </div>
         </div>
     <?php endif; ?>
