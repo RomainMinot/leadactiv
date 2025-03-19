@@ -867,4 +867,24 @@ document.addEventListener('DOMContentLoaded', () => {
             observer.observe(section);
         });
     }
+
+    // Get all campaign headers
+    const campaignHeaders = document.querySelectorAll('.temoignage__campaign__header');
+    
+    campaignHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-bs-target');
+            const targetCollapse = document.querySelector(targetId);
+            const allCollapses = document.querySelectorAll('.temoignage__campaign .collapse');
+            
+            allCollapses.forEach(collapse => {
+                if (collapse !== targetCollapse && collapse.classList.contains('show')) {
+                    const button = collapse.previousElementSibling;
+                    button.classList.toggle('collapsed');
+                    const head = collapse.previousElementSibling;
+                    head.click();
+                }
+            });
+        });
+    });
 });

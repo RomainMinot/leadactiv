@@ -270,6 +270,50 @@
             }
         }
     }
+    &__campaign {
+        border-radius: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        &__header {
+            cursor: pointer;
+            transition: all .3s ease;
+            img {
+                transition: all .3s ease;
+            }
+            &[aria-expanded="true"] {
+                .btn-arrow {
+                    img {
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.btn-arrow {
+    background-color: transparent;
+    padding: 0!important;
+    min-width: 43px;
+    min-height: 43px;
+    max-width: 43px;
+    max-height: 43px;
+    border-radius: 50%;
+    border: 1px solid $teal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+    img {
+        transition: all .3s ease;
+    }
+    &:hover {
+        background-color: $teal;
+        img {
+            filter: grayscale(1) invert(1);
+        }
+    }
 }
 
 .single {
