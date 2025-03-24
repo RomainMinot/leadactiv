@@ -175,7 +175,7 @@ body .f-34 p {
   font-size:34px;
 }
 body .f-20 {
-  font-size:20px
+  font-size:20px!important;
 }
 body .f-20 p {
   font-size:20px;
@@ -15158,10 +15158,9 @@ body a.filter-link.active:after {
 }
 
 .page__etude--chiffres__right h3 {
-  font-size: 40px;
   margin-bottom: 50px;
   width: 100%;
-  text-align: center;
+  text-align: start;
 }
 
 .page__etude--chiffres--chiffre {
@@ -15435,7 +15434,6 @@ body a.filter-link.active:after {
   }
 
   .page__etude--chiffres__right h3 {
-    font-size: 20px !important;
     margin-bottom: 20px;
   }
 

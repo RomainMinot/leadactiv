@@ -145,6 +145,28 @@
     }
 }
 
+.dot__text {
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: $lavender;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        outline: 10px solid $grey;
+    }
+    &--left::after {
+        left: 0;
+        top: 0;
+        transform: translate(-50%, 50%);
+    }
+    &--top::after {
+        left: 0;
+        top: -24px;
+        transform: translate(0, -50%);
+    }
+}
+
 .temoignage {
     &__quote {
         padding: 48px;
@@ -285,6 +307,39 @@
                 .btn-arrow {
                     img {
                         transform: rotate(-180deg);
+                    }
+                }
+            }
+        }
+        &__cibler {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            border-left: 1px solid $lavender;
+            border-bottom: 1px solid $lavender;
+            border-radius: 0 0 0 32px;
+            padding-left: 24px;
+            padding-bottom: 48px;
+        }
+        &__bottom {
+            padding: 24px;
+            padding-bottom: 0;
+            gap: 24px;
+            &__item {
+                position: relative;
+                flex-grow: 1;
+                &__row {
+                    padding: 10px 0;
+                    color: $text-secondary;
+                    border-bottom: 1px solid $teal-o;
+                    line-height: 1.5;
+                    &::before {
+                        display: none;
+                    }
+                    strong {
+                        color: $black;
+                        font-weight: 300;
                     }
                 }
             }

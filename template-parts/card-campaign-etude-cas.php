@@ -16,8 +16,83 @@ if ($campaign):
         </button>
     </div>
     <div class="collapse" id="collapseExample<?php echo $computed_index ?>">
-        <div class="card card-body">
-            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        <div class="temoignage__campaign__cibler">
+            <h4 class="f-20 m-0 dot__text dot__text--left">Cibler</h4>
+            <div>
+                <span class="label f-14 position-relative pb-1">Secteur</span>
+                <div>
+                    <span class="tag mb-1 tag-white">
+                        Industrie
+                    </span>
+                </div>
+            </div>
+            <div>
+                <span class="label f-14">Entreprises</span>
+                <div class="mt-1">
+                    <span class="tag mb-1 tag-white">
+                        Grand compte
+                    </span>
+                </div>
+            </div>
+            <div>
+                <span class="label f-14">Fonction cibles</span>
+                <div class="mt-1">
+                    <span class="tag mb-1 tag-white">
+                        Directions générales et marketing
+                    </span>
+                </div>
+            </div>
+            <div>
+                <span class="label f-14">Zone géographique</span>
+                <div class="mt-1">
+                    <span class="tag mb-1 tag-white">
+                        France
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="temoignage__campaign__bottom w-100 d-flex align-items-start justify-content-between">
+            <div class="temoignage__campaign__bottom__item">
+                <h4 class="f-20 m-0 dot__text dot__text--top">Tester</h4>
+                <ul class="d-flex flex-column align-items-start pl-0 mt-2 mb-0">
+                    <li class="temoignage__campaign__bottom__item__row">
+                        <span class="f-14">
+                            <strong>Test 1 :</strong> A/B test sur les messages et sur l’argumentaire commercial
+                        </span>
+                    </li>
+                    <li class="temoignage__campaign__bottom__item__row">
+                        <span class="f-14">
+                            <strong>Test 2 :</strong> Différents secteurs d’activités
+                        </span>
+                    </li>
+                    <li class="temoignage__campaign__bottom__item__row">
+                        <span class="f-14">
+                            <strong>Test 3 :</strong>  Temporalité et saisonnalité des besoins des prospects grâce à leurs retours
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="temoignage__campaign__bottom__item">
+                <h4 class="f-20 m-0 dot__text dot__text--top">Analyser</h4>
+                <ul class="d-flex flex-column align-items-start pl-0 mt-2 mb-0">
+                    <li class="temoignage__campaign__bottom__item__row">
+                        <span class="f-14">
+                        Identification d’une séquence de messages plus performante que les autres
+                        </span>
+                    </li>
+                    <li class="temoignage__campaign__bottom__item__row">
+                        <span class="f-14">
+                            Identification des secteurs les plus porteurs
+                        </span>
+                    </li>
+                    <li class="temoignage__campaign__bottom__item__row">
+                        <span class="f-14">
+                            Identification du bon timing pour relancer les prospects 
+                        </span>
+                    </li>
+                    
+                </ul>
+            </div>
         </div>
     </div>
 </div>
