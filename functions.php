@@ -217,6 +217,9 @@ add_action('init', function() {
     add_new_taxonomy('fonction', 'etude_de_cas', false);
 });
 add_action('init', function() {
+    add_new_taxonomy('entreprise', 'etude_de_cas', false);
+});
+add_action('init', function() {
     add_new_taxonomy('localisation', 'etude_de_cas', false);
 });
 
