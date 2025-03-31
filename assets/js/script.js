@@ -221,10 +221,11 @@ $(document).ready(function($){
             'items': 12,
             responsive : {
                 0 : {
-                    'items' : 3,
+                    'items' : 1,
+                    'margin': 10,
                 },
                 756 : {
-                    'items' : 3,
+                    'items' : 2,
                 },
                 1200 : {
                     'items' : 3,

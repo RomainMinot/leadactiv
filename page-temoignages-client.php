@@ -8,9 +8,9 @@
 <main class="page__temoignages">
     <section class="page__temoignages__header position-relative d-flex bg-deep-purple align-items-center">
         <div class="container__lg">
-            <div class="py-3 py-md-10 mt-5">      
+            <div class="py-6 py-md-8 py-lg-10 mt-5">      
                 <div class="relative row justify-content-center h-100">
-                    <div class="col-md-8 col-10 col-lg-8">
+                    <div class="col-12 col-md-9 col-lg-8">
                         <div class="d-flex flex-column align-items-center justify-content-center">
                             <h1 class="big-title text-darck-green mt-0 f-56 text-center mb-0">
                                 <?php echo get_field('titre'); ?>
@@ -56,14 +56,15 @@
     <!-- Témoignages preview -->
     <section class="page__temoignages__slider bg-white position-relative">
         <div class="container__lg">
-            <div class="py-5 py-md-8">
+            <div class="pt-5 pb-6 py-md-8">
                 <div class="relative row justify-content-center">
                     <div class="col-md-8 col-10 col-lg-8 text-center">
-                        <h2 class="f-48 mt-0 mb-4">Nos témoignages client</h2>
+                        <h2 class="page__temoignages__slider__title f-48 mt-0 mb-4">Nos témoignages client</h2>
                         <p class="content-text f-18">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="<?php echo $temoignages_list_link; ?>" class="page__temoignages__slider__btn--phone btn mt-4 color-btn-dark">Découvrir tous les témoignages</a>
                     </div>
                 </div>
-                <div class="col-12 mt-6">
+                <div class="col-12 mt-4 mt-md-6">
                     <div id="carouselTestimonials" class="owl-carousel" data-bs-ride="carousel">
                         <?php 
                         $case_studies = get_field('etudes_cas'); 
@@ -82,7 +83,7 @@
                         endif;
                         ?>
                     </div>
-                    <div class="row justify-content-center mt-5">
+                    <div class="page__temoignages__slider__btn--laptop row justify-content-center mt-5">
                         <div class="col-auto text-center">
                             <a href="<?php echo $temoignages_list_link; ?>" class="btn color-btn-dark">Découvrir tous les témoignages</a>
                         </div>
@@ -96,7 +97,7 @@
         <div class="container__lg">
             <div class="pb-5 pb-md-8">
                 <div class="page__temoignages__discover__card">
-                    <h2 class="z-1 small-title f-36 mb-5 mt-0 text-center">
+                    <h2 class="z-1 small-title f-36 mb-4 mb-md-5 mt-0 text-center">
                         <?php echo get_field('titre_decouverte'); ?>
                     </h2>
                     <div class="page__temoignages__discover__card__links z-1 my-3 gap-2 d-flex flex-wrap justify-content-center">
@@ -114,7 +115,7 @@
                             endif; 
                         ?>
                     </div>
-                    <p class="z-1 w-50 mt-3 text-center">+ 50 avis certifiés sur <a href="https://trustfolio.co/profil/leadactiv-ltMOZFoRLTk" target="_blank">Trustfolio</a></p>
+                    <p class="page__temoignages__discover__card__texts z-1 w-50 mt-3 text-center">+ 50 avis certifiés sur <a href="https://trustfolio.co/profil/leadactiv-ltMOZFoRLTk" target="_blank">Trustfolio</a></p>
                     <?php 
                     if ($logo_bg_discover_url):
                         echo '<img src="' . esc_url($logo_bg_discover_url) . '" alt="Background logo" class="page__temoignages__discover__card__logo"/>';

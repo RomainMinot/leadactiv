@@ -34,7 +34,7 @@ wp_footer();
                     </div>
                     <!-- Newsletter Signup Section -->
                     <div class="footer_newsletter-wrapper">
-                        <div class="footer_newsletter-line mb-5">
+                        <div class="footer_newsletter-line footer_newsletter-line--top mb-5">
                             <div class="margin-bottom margin-xsmall">
                                 <div class="f-24 mb-1 mb-md-2 mt-0">
                                     <?php echo esc_html($option_fields['newsletter_title']); ?>
@@ -60,7 +60,7 @@ wp_footer();
                 <hr class="footer-divider">
                 <!-- Bottom -->
                 <section class="footer-bottom-wrapper text-center">
-                    <div class="d-flex flex-row align-items-start justify-content-between">
+                    <div class="d-flex flex-column flex-md-row align-items-start justify-content-between">
                         <!-- Logo -->
                         <?php if($option_fields["logo_clair"]): ?>
                             <a href="<?php echo home_url('/') ?>" class="footer__logo">
@@ -86,13 +86,13 @@ wp_footer();
                     <hr class="footer-divider footer-divider--opacity">
                     <div class="footer-links">
                         <div class="links col-12 d-flex justify-content-between align-items-center">
-                            <div class="d-flex gap-4">
+                            <div class="d-flex flex-column flex-md-row align-items-center align-items-md-start gap-4">
                                 <a href="<?php echo home_url('/mentions-legales/'); ?>">Mentions légales</a>
                                 <a href="<?php echo home_url('/politique-de-confidentialite/'); ?>">Politique de confidentialité</a>
                                 <a href="<?php echo home_url('/politique-cookies/'); ?>">Politique relative aux cookies</a>
                                 <a href="javascript:openAxeptioCookies()">Gérez vos cookies</a>
                             </div>
-                            <span>&copy; Copyright LeadActiv 2025, tous droits réservés</span>
+                            <span class="mt-3 mt-md-0">&copy; Copyright LeadActiv 2025, tous droits réservés</span>
                         </div>
                     </div>
                 </section> 
