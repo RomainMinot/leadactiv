@@ -15362,12 +15362,17 @@ body a.filter-link.active:after {
     max-width: 100%;
     height: auto;
     margin-bottom: 20px;
+    padding: 40px;
   }
 
   .lame_listes_texte__content .f-48 {
-    font-size: 28px;
+    font-size: 28px!important;
     margin-bottom: 20px;
     text-align: center;
+    p {
+      font-size: 36px!important;
+      text-align: center;
+    }
   }
 
   .lame_listes_texte__content p.f-16 {

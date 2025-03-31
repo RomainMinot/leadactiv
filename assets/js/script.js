@@ -806,12 +806,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function handleStickySection() {
+        if (window.innerWidth <= 768) {
+            resetStickyElement();
+            return;
+        }
+
         const distanceToTop = 105;
         const distanceToBottom = 96;
         const parentRect = stickyElement.parentElement.getBoundingClientRect();
         const { top: distanceFromTop } = parentRect;
         const stickyRect = stickyElement.getBoundingClientRect();
-
+        
         if (!isElementVisible(parentRect) || distanceFromTop > distanceToTop) {
             resetStickyElement();
             return;

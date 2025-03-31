@@ -113,7 +113,7 @@
                     </div>
                     <div class="row my-3">
                         <div class="col-12">
-                            <div id="filterTagsContainer" class="d-flex flex-row align-items-center justify-content-start flex-wrap gap-2">
+                            <div id="filterTagsContainer" class="d-flex flex-row align-items-center justify-content-start flex-wrapreverse flex-md-wrap gap-2">
                                 <button class="page__temoignages__list__filters__clear d-none">
                                     Clear filters <i class="ml-1 fas fa-times"></i>
                                 </button>

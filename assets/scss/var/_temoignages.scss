@@ -559,4 +559,57 @@
     .email-form_wrapper {
         flex-direction: column;
     }
+
+    .page__etude {
+        &--chiffres {
+            padding: 80px 24px;
+            &__left {
+                width: 100%;
+                & p, & h2 {
+                    text-align: center;
+                }
+                & p {
+                    font-size: 12px!important;
+                    width: 100%!important;
+                }
+            }
+            &__right {
+                width: 100%;
+                padding-top: 3rem;
+                padding-bottom: 0;
+                padding-left: 0;
+                gap: 40px;
+                .vr {
+                    width: 70px;
+                    height: 1px;
+                    min-height: 1px;
+                    top: unset;
+                    bottom: unset;
+                    transform: translatex(-50%);
+                    left: 50%;
+                }
+            }
+            &--chiffre {
+                text-align: center;
+                font-size: 64px;
+            }
+        }
+    }
+
+    .single {
+        &__etude {
+            h1 {
+                font-size: 32px!important;
+                max-width: 100%;
+            }
+        }
+        &__sticky {
+            padding: 24px;
+            position: fixed;
+        }
+    }
+
+    .video-container {
+        height: auto;
+    }
 }
