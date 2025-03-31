@@ -8324,6 +8324,7 @@ fieldset:disabled .btn {
 .w-100 {
   width:100% !important
 }
+
 .w-632 {
   max-width: 632px;
 }
@@ -10367,6 +10368,9 @@ fieldset:disabled .btn {
   }
 }
 @media(min-width: 768px) {
+  .w-md-auto {
+    width:auto !important
+  }
   .float-md-start {
     float:left !important
   }
@@ -11595,6 +11599,10 @@ fieldset:disabled .btn {
   .py-lg-5 {
     padding-top:3rem !important;
     padding-bottom:3rem !important
+  }
+  .py-lg-10 {
+    padding-top:6rem !important;
+    padding-bottom:6rem !important
   }
   .pt-lg-0 {
     padding-top:0 !important
@@ -15596,6 +15604,7 @@ body a.filter-link.active:after {
     width: 125px;
     height: 40px;
     object-fit: contain;
+    object-position: left;
   }
   .lame--etude-cas .tag-container {
     justify-content: center !important;
@@ -15606,7 +15615,6 @@ body a.filter-link.active:after {
   .case__study .card--title {
     font-size: 18px;
     margin-top: 10px;
-    text-align: center;
   }
 
   .case__study .card--description {

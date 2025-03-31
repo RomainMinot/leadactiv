@@ -16,7 +16,7 @@
     <!-- Hero -->
     <section class="position-relative d-flex bg-deep-purple align-items-center">
         <div class="container__lg">
-            <div class="py-3 pt-md-9 pb-md-9 mt-5">      
+            <div class="py-6 pt-md-9 pb-md-9 mt-5">      
                 <div class="relative row justify-content-center h-100">
                     <div class="col-md-8 col-10 col-lg-8">
                         <div class="d-flex flex-column align-items-center justify-content-center text-center">
@@ -40,13 +40,13 @@
         <div class="container__lg">
             <div class="py-5 pt-2 pb-md-8">
                 <!-- Filter section -->
-                <div class="py-4 mb-2">
-                    <div class="row d-flex align-items-stretch justify-content-between">
+                <div class="pt-5 pb-2 py-md-4 mb-2">
+                    <div class="row d-flex flex-column flex-md-row align-items-stretch justify-content-between">
                         <!-- Filters -->
-                        <div class="col-8">
+                        <div class="col-12 col-md-8">
                             <p class="w-100 mb-3">Filtre</p>
-                            <div class="w-100 d-flex align-items-center justify-content-center flex-nowrap gap-2">
-                                <div class="flex-1">
+                            <div class="w-100 d-flex mb-4 mb-md-0 flex-column flex-md-row align-items-center justify-content-center flex-nowrap gap-3 gap-md-2">
+                                <div class="w-100 w-md-auto flex-1">
                                     <label for="selectSector" class="label">Secteur</label>
                                     <select id="selectSector" class="grid__studies--filter input" name="sector">
                                         <option value="*">-- Secteur d'activité</option>
@@ -65,7 +65,7 @@
                                         ?>
                                     </select>
                                 </div>
-                                <div class="flex-1">
+                                <div class="w-100 w-md-auto flex-1">
                                     <label for="selectFonction" class="label">Fonction ciblée</label>
                                     <select id="selectFonction" class="grid__studies--filter input" name="fonction">
                                         <option value="*">-- Fonction ciblée</option>
@@ -84,7 +84,7 @@
                                         ?>
                                     </select>
                                 </div>
-                                <div class="flex-1">
+                                <div class="w-100 w-md-auto flex-1">
                                     <label for="selectLocalisation" class="label">Localisation</label>
                                     <select id="selectLocalisation" class="grid__studies--filter input" name="localisation">
                                         <option value="*">-- Localisation</option>
@@ -106,7 +106,7 @@
                             </div>
                         </div>
                         <!-- Search -->
-                        <div class="col-3 d-flex flex-column align-items-start justify-content-between">
+                        <div class="col-12 col-md-3 d-flex flex-column align-items-start justify-content-between">
                             <p class="w-100 mb-3">Recherche</p>
                             <input type="search" class="input input--search grid__studies--search" placeholder="Search" name="search">
                         </div>
@@ -122,7 +122,7 @@
                     </div>
                 </div>
                 <!-- List -->
-                <div class="grid__studies row g-4 overflow-y-hidden">
+                <div class="grid__studies row gap-3 gap-md-4 overflow-y-hidden">
                     <?php
                     if ($case_studies && !empty($case_studies)) {
                         foreach ($case_studies as $index => $case_study) {

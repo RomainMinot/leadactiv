@@ -323,19 +323,19 @@ document.addEventListener("DOMContentLoaded", function () {
     var hideNavbarTimeout; // Variable to store the timeout
 
     window.addEventListener("scroll", function () {
-        var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (window.innerWidth > 768) {
+            var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-        if (currentScroll > lastScrollTop) {
-            // Downscroll
-            navbar.style.top = "-100px"; // Adjust as necessary to hide the navbar
-            isNavbarHidden = true;
-            clearTimeout(hideNavbarTimeout); // Clear any existing timeout
-        } else {
-            // Upscroll
-            navbar.style.top = "0";
-            isNavbarHidden = false;
+            if (currentScroll > lastScrollTop) {
+                navbar.style.top = "-100px";
+                isNavbarHidden = true;
+                clearTimeout(hideNavbarTimeout);
+            } else {
+                navbar.style.top = "0";
+                isNavbarHidden = false;
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
         }
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
     });
 
     window.addEventListener("mousemove", function (event) {
