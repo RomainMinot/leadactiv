@@ -392,7 +392,6 @@
         }
         &__tags {
             gap: 32px;
-            
         }
         &__sticky {
             position: relative;
@@ -602,6 +601,17 @@
                 font-size: 32px!important;
                 max-width: 100%;
             }
+            &__tags {
+                gap: 16px;
+            }
+            &--header h1 p {
+                font-size: 42px!important;
+            }
+            &__section {
+                h3 {
+                    font-size: 32px!important;
+                }
+            }
         }
         &__sticky {
             padding: 24px;
@@ -611,5 +621,58 @@
 
     .video-container {
         height: auto;
+    }
+
+    .lame_listes_texte__content {
+        align-items: center;
+        a {
+            width: 100%;
+        }
+        .bg-light-purple &--texts {
+            p {
+                text-align: center;
+            }
+        }
+    }
+
+    .lame_listes_texte__content.bg-light-purple {
+        p {
+            text-align: center;
+        }
+    }
+
+    .temoignage {
+        &__quote {
+            &__content {
+                p {
+                    font-size: 18px!important;
+                }
+            }
+            &__bottom {
+                &::before {
+                    top: 3.5px;
+                    outline-offset: -30px;
+                }
+                &::after {
+                    top: 66.5px;
+                }
+                &__item {
+                    &--down {
+                        margin-top: 11px;
+                    }
+                    &__icon {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+            }
+        }
+        &__campaign {
+            &__header {
+                h3 {
+                    font-size: 20px!important;
+                }
+            }
+        }
     }
 }

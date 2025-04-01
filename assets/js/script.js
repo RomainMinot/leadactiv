@@ -335,6 +335,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 isNavbarHidden = false;
             }
             lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        } else {
+            navbar.style.top = "0";
+            isNavbarHidden = false;
         }
     });
 
@@ -854,7 +857,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function observeSections() {
         const options = {
             root: null,
-            rootMargin: '-25% 0px -50% 0px',
+            rootMargin: '-50% 0px -50% 0px',
             threshold: [0, 0.25, 0.5, 0.75, 1]
         };
 
