@@ -128,7 +128,7 @@ $(document).ready(function($){
                 0 : {
                     'items' : 2,
                 },
-                756 : {
+                768 : {
                     'items' : 4,
                 },
                 1200 : {
@@ -150,7 +150,7 @@ $(document).ready(function($){
                 0 : {
                     'items' : 1,
                 },
-                750 : {
+                768 : {
                     'items' : 2,
                 },
                 1200 : {
@@ -175,7 +175,7 @@ $(document).ready(function($){
                     0 : {
                         'items' : 3,
                     },
-                    756 : {
+                    768 : {
                         'items' : 4,
                     },
                     1200 : {
@@ -200,7 +200,7 @@ $(document).ready(function($){
                     0 : {
                         'items' : 3,
                     },
-                    756 : {
+                    768 : {
                         'items' : 5,
                     },
                     1200 : {
@@ -224,7 +224,7 @@ $(document).ready(function($){
                     'items' : 1,
                     'margin': 10,
                 },
-                756 : {
+                768 : {
                     'items' : 2,
                 },
                 1200 : {
@@ -232,6 +232,7 @@ $(document).ready(function($){
                 }
             },
             'dots': true,
+            'dotsEach': 1,
             'autoplay': false,
             'slideTransition': 'linear',
             'margin': 32,
@@ -245,7 +246,7 @@ $(document).ready(function($){
                     0 : {
                         'items' : 2,
                     },
-                    756 : {
+                    768 : {
                         'items' : 4,
                     },
                     1200 : {
