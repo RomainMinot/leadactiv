@@ -4,11 +4,15 @@
     $logo_bg_discover_url = wp_get_attachment_url($logo_bg_discover_id);
     $post_type = 'etudedecas';
 
-    $case_studies = get_posts(array(
-        'post_type' => $post_type,
-        'posts_per_page' => -1,
-        'post_status' => 'publish',
-    ));
+    $case_studies = [];
+    $loop = \Genesii\PostType\EtudeDeCas::findAll();
+    if ($loop->have_posts()) {
+        while ($loop->have_posts()) {
+            $loop->the_post();
+            $case_studies[] = get_post();
+        }
+        wp_reset_postdata();
+    }
     $has_slider = false;
 ?>
 
@@ -122,7 +126,7 @@
                     </div>
                 </div>
                 <!-- List -->
-                <div class="grid__studies row gap-3 gap-md-4 overflow-y-hidden">
+                <div class="grid__studies row g-2 g-md-4 overflow-y-hidden">
                     <?php
                     if ($case_studies && !empty($case_studies)) {
                         foreach ($case_studies as $index => $case_study) {
